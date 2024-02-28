@@ -1,0 +1,130 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+header {
+  margin: 30px;
+   width: 200px;
+   height: 200px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+header img { 
+  width: 100%;
+  height: 100%;
+}
+
+header h2 {
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: bold;
+}
+
+
+.Active{
+  border: 2px solid rgb(255, 132, 0);
+}
+#Player-info li{
+  list-style-type: none;
+}
+#Player-info {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 30px;
+  align-items: center;
+}
+
+
+#player-filed{
+  display: flex;
+  background-color: grey;
+  
+}
+
+#Player-info button{
+  border: none;
+  background-color:grey;
+  cursor: pointer;
+  border-radius: 50px;
+  
+}
+#Player-info button:hover{
+  background-color: chocolate;
+  
+}
+
+#Player-info input{
+  margin-right: 15px;
+  
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 60px;
+  text-align: center;
+  border: none;
+  background-color: rgb(211, 208, 208);
+  min-width: 100px;
+  font-size: 15px;
+  height: 20px;
+  outline: none;
+  padding: 0;
+}
+
+
+#Player-info #player-Name{
+  margin-right: 15px;
+  color: rgb(130, 125, 125);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 60px;
+  text-align: center;
+  border: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: rgb(176, 176, 176);
+  min-width: 100px;
+  font-size: 15px;
+  height: 20px;
+  margin-left: 10px;
+}
+#GameBoard {
+  display: grid;
+  background-color: blueviolet;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  width: 420px;
+  height: 420px;
+}
+#GameBoard li {
+  background-color: azure;
+  border: 1px  solid black;
+  list-style-type:none;
+  text-align: center;
+  width: 110px;
+  height: 110px;
+
+  
+}
+
+#GameBoard li button{
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-size: 50px;
+  background-color: none;
+  cursor: pointer;
+
+}
+
+#GameBoard li button:hover{
+  opacity: 0.4;
+}
+
+
