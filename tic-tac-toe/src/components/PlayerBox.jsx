@@ -1,20 +1,18 @@
 import { useState } from "react";
-export default function PlayerBox({ name ,symbol,isActive}) {
+export default function PlayerBox({ name, symbol, isActive ,player}) {
   const [isEditing, setIsEditing] = useState(false);
   const [names, setname] = useState(name);
   function handleClick() {
     setIsEditing((value) => !value);
+    player.name = names;
   }
   function tackValue(value) {
-    console.log(value);
-    console.log(name);
-    if (isEditing) 
-        setname(value.target.value);
+    setname(value.target.value);
   }
 
   return (
     <ol id="Player-info" className={isActive ? "Active" : ""}>
-        <li>{`${symbol} :`}</li>
+      <li>{`${symbol} :`}</li>
       {isEditing ? (
         <input type="text" onChange={tackValue} value={names}></input>
       ) : (
