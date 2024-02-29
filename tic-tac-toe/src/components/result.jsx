@@ -1,4 +1,4 @@
-export default function Result({ children ,handleRestart}) {
+export default function Result({ children, handleRestart }) {
   return (
     <div id="result">
       <h2>{children}</h2>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function PlayerBox({ name, symbol, isActive ,player}) {
+export default function PlayerBox({ name, symbol, isActive, player }) {
   const [isEditing, setIsEditing] = useState(false);
   const [names, setname] = useState(name);
   function handleClick() {

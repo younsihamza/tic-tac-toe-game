@@ -1,6 +1,13 @@
 import BoxTab from "./BoxTab";
 import Result from "./result";
-export default function GameBorder({ board, handleClickBox, isWin ,playerWin ,handleRestart,isDrow}) {
+export default function GameBorder({
+  board,
+  handleClickBox,
+  isWin,
+  playerWin,
+  handleRestart,
+  isDrow,
+}) {
   return (
     <ol id="GameBoard">
       {board.map((item, indexrow) =>
@@ -15,8 +22,14 @@ export default function GameBorder({ board, handleClickBox, isWin ,playerWin ,ha
           </BoxTab>
         ))
       )}
-      {!isWin && isDrow == 9 && <Result handleRestart={handleRestart}>{`you are Draw `}</Result>}
-      {isWin && <Result handleRestart={handleRestart}>{`Winner is ${playerWin.name}`}</Result>}
+      {!isWin && isDrow == 9 && (
+        <Result handleRestart={handleRestart}>{`you are Draw `}</Result>
+      )}
+      {isWin && (
+        <Result
+          handleRestart={handleRestart}
+        >{`Winner is ${playerWin.name}`}</Result>
+      )}
     </ol>
   );
 }
